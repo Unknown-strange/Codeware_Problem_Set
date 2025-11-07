@@ -16,8 +16,11 @@ function likes( $names ) {
   }
   else if(count($array) > 3){
     $first_two = array_slice($array,0,2);
+    $firstshift = array_shift($array);
+    $secondshift = array_shift($array);
+    $remaining = count($array);
     $result = implode(', ', $first_two);
-    $final = $result . " and 2 others like this";
+    $final = $result . " and " . $remaining . " others like this";
     return $final;
   }
   else{
