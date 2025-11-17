@@ -15,7 +15,7 @@ function validBraces($braces){
     }
     else{
       $last = array_pop($stack);
-      if ($char !== $pair[$last]){
+      if ($last === null || $char !== $pair[$last]){
         return false;
       }
     }
